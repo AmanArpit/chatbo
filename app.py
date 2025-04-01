@@ -11,15 +11,16 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores.chroma import Chroma
 from operator import itemgetter
 
-# Load the Gemini API key from environment variables
-gemini_api_key = os.getenv("GEMINI_API_KEY")
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-# Initialize the Gemini model with the API key
+# Assuming you have a Google API key
+google_api_key = "AIzaSyCPC7p0EaOzo72MKbVubYt_dsBGAqv5QCc"
+
 gemini = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
+    api_key=google_api_key,
     temperature=0.1,
-    streaming=True,
-    api_key=gemini_api_key
+    streaming=True
 )
 
 # Customize Streamlit UI
