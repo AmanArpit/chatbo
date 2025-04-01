@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 import langchain
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_community.vectorstores.chroma import Chroma
