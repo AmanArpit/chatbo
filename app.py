@@ -101,7 +101,7 @@ def format_docs(docs):
     return "\n\n".join([d.page_content for d in docs])
 
 # Combining retriever and model in a pipeline
-qa_rag_chain = qa_prompt | gemini
+qa_chain = LLMChain(llm=gemini, prompt=qa_prompt)
 
 # Chat history
 streamlit_msg_history = StreamlitChatMessageHistory(key="langchain_messages")
