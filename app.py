@@ -1,5 +1,4 @@
 import streamlit as st
-import langchain
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_community.vectorstores.chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -50,9 +49,11 @@ llm = ChatOpenAI(temperature=0.1, streaming=True)
 # Define prompt template for QA
 qa_template = """
 Use only the following pieces of context to answer the question at the end.
-If you don't know the answer, just say that you don't know, 
-don't try to make up an answer. Keep the answer as concise as possible.
+If you don't know the answer, just say that you don't know, don't try to make up an answer.
+Keep the answer as concise as possible.
+
 {context}
+
 Question: {question}
 """
 
@@ -103,4 +104,3 @@ if user_prompt:
     if sources:
         st.markdown("__Sources:__")
         st.dataframe(data=pd.DataFrame(sources[:3]), width=1000)
-
