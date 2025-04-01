@@ -1,10 +1,9 @@
-streamlit==1.32.2
 langchain==0.1.12
 langchain-openai==0.0.8
 langchain-community==0.0.29
-langchain-google-genai
-google-api-core==2.9.0
-google-ai-generative-language==0.6.16
+streamlit==1.32.2
 PyMuPDF==1.24.0
 chromadb==0.4.24
-langchain-text-splitters
+pyngrok==7.1.5
+langchain-google-genai
+
