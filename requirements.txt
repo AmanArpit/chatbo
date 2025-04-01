@@ -1,8 +1,8 @@
-!pip install langchain==0.1.12
-!pip install langchain-openai==0.0.8
-!pip install langchain-community==0.0.29
-!pip install streamlit==1.32.2
-!pip install PyMuPDF==1.24.0
-!pip install chromadb==0.4.24
-!pip install pyngrok==7.1.5
-!pip install langchain-google-genai
+streamlit==1.32.2
+langchain==0.1.12
+langchain-openai==0.0.8
+langchain-community==0.0.29
+langchain-google-genai
+PyMuPDF==1.24.0
+chromadb==0.4.24
+langchain-text-splitters
